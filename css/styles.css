@@ -1,0 +1,169 @@
+/* css/styles.css */
+
+:root {
+    /* Branding - derived from Expert Multiservices Logo */
+    --brand-navy: #0d2c56;
+    --brand-red: #c62828; 
+    --brand-gold: #d4a017;
+    
+    /* Layout */
+    --text-dark: #1a1a1a;
+    --text-gray: #555555;
+    --bg-light: #f4f6f8;
+    --white: #ffffff;
+    
+    /* Fonts - Promiller style uses Serifs for headings */
+    --font-heading: 'Playfair Display', serif; 
+    --font-body: 'Lato', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background: var(--white);
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--brand-navy);
+    font-weight: 700;
+}
+h1 { font-size: 3.2rem; line-height: 1.1; margin-bottom: 20px; }
+h2 { font-size: 2.5rem; margin-bottom: 15px; }
+p { color: var(--text-gray); font-size: 1rem; margin-bottom: 20px; }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+/* Buttons */
+.btn {
+    background: var(--brand-red);
+    color: white;
+    padding: 15px 35px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover { background: var(--brand-navy); }
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+.btn-outline:hover { background: white; color: var(--brand-navy); }
+
+/* Header */
+header {
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img { height: 60px; }
+.nav-links { display: flex; gap: 30px; list-style: none; }
+.nav-links a { font-weight: 700; font-size: 0.9rem; text-transform: uppercase; color: var(--brand-navy); }
+.nav-links a:hover, .nav-links a.active { color: var(--brand-red); }
+
+/* Mobile Menu */
+.hamburger { display: none; font-size: 1.8rem; cursor: pointer; }
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(13, 44, 86, 0.7), rgba(13, 44, 86, 0.6)), url('../assets/images/hotel-lobby.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.hero h1 { color: white; }
+.hero p { color: #eee; font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; }
+
+/* Sections */
+.section-padding { padding: 80px 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.text-center { text-align: center; }
+
+/* Cards */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+.card {
+    background: white;
+    padding: 40px 30px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+.card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: var(--brand-gold); }
+.icon { font-size: 2.5rem; color: var(--brand-red); margin-bottom: 20px; }
+
+/* About Split */
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.split img { width: 100%; border-radius: 4px; }
+
+/* Footer */
+footer { background: var(--brand-navy); color: #ccc; padding: 70px 0 20px; }
+footer h4 { color: white; margin-bottom: 20px; font-size: 1.2rem; }
+footer ul { list-style: none; }
+footer li { margin-bottom: 10px; }
+footer a:hover { color: var(--brand-gold); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 2fr; gap: 30px; margin-bottom: 40px; }
+.copyright { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; }
+
+/* Forms */
+.form-group { margin-bottom: 20px; }
+.form-control { width: 100%; padding: 15px; border: 1px solid #ccc; font-family: var(--font-body); }
+textarea.form-control { resize: none; height: 120px; }
+
+/* WhatsApp Float */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 30px;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+.whatsapp-btn:hover { background: #128c7e; transform: scale(1.1); }
+
+/* Responsive */
+@media(max-width: 900px) {
+    .navbar { flex-wrap: wrap; }
+    .hamburger { display: block; margin-left: auto; }
+    .nav-links {
+        display: none; width: 100%; flex-direction: column; 
+        background: white; position: absolute; top: 80px; left: 0; padding: 20px; text-align: center;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    }
+    .nav-links.active { display: flex; }
+    .grid-3, .split, .footer-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.5rem; }
+}

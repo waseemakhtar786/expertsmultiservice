@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | Expert Multiservices</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo"><img src="assets/logo.jpg"></a>
+            <div class="hamburger">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <!-- <li><a href="projects.html">Projects</a></li> -->
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="section-padding text-center bg-light">
+        <h1>Contact Us</h1>
+        <p>Discuss your hotel project with our experts.</p>
+    </div>
+
+    <section class="section-padding">
+        <div class="container split" style="align-items:flex-start;">
+            <div>
+                <h3>Contact Info</h3>
+                <div style="margin-top:20px; font-size:1.1rem;">
+                    <p><strong>EXPERT MULTISERVICES</strong></p>
+                    <p>Office no 206, C wing, KPCT Mall,<br>Fatima Nagar, Pune 411040</p>
+                    <p>Phone: <a href="tel:+919665555119" style="color:var(--brand-red);">+91 96655 55119</a></p>
+                    <p>Email: info@expertsmultiservice.com</p>
+                </div>
+                <!-- Map Embed -->
+                <div style="margin-top:20px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.5!2d73.899!3d18.503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKPCT%20Mall!5e0" width="100%" height="250" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+            
+            <div style="background: white; padding: 40px; border:1px solid #ddd; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
+                <h3>Send a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Interested In</label>
+                        <select class="form-control">
+                            <option>Asset Management</option>
+                            <option>Operator Search</option>
+                            <option>Revenue Management</option>
+                            <option>General Consulting</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Enquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Scripts -->
+    <a href="https://wa.me/919665555119?text=I%20need%20hotel%20consulting%20help" class="whatsapp-btn">W</a>
+    <footer><div class="container copyright">© 2025 Expert Multiservices</div></footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
